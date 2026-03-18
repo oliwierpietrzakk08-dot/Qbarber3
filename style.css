@@ -497,11 +497,18 @@ h1, h2, h3, h4 {
     margin-bottom: 2.5rem; /* Added spacing to separate from button */
 }
 
-/* Floating Instagram */
-.floating-ig {
+/* Floating Socials */
+.floating-socials {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1001;
+}
+
+.social-icon-box {
     width: 50px;
     height: 50px;
     background: var(--color-text);
@@ -510,17 +517,17 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1001;
     transition: var(--transition-smooth);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-decoration: none;
 }
 
-.floating-ig svg {
+.social-icon-box svg {
     width: 24px;
     height: 24px;
 }
 
-.floating-ig:hover {
+.social-icon-box:hover {
     transform: scale(1.1) rotate(5deg);
 }
 
